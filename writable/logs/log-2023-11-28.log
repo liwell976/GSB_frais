@@ -1,0 +1,23 @@
+CRITICAL - 2023-11-28 09:28:40 --> include(include/fct.inc.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\majGSB_main.php on line 9.
+ 1 APPPATH\Controllers\majGSB_main.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/fct.inc.php): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\majGSB_main.php', 9)
+ 2 APPPATH\Controllers\majGSB_main.php(9): include()
+ 3 SYSTEMPATH\Router\AutoRouter.php(147): include_once('APPPATH\\Controllers\\majGSB_main.php')
+ 4 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('majGsb_main')
+ 5 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('majGsb_main')
+ 6 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('majGsb_main')
+ 7 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-28 09:30:18 --> SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a131-202310' for key 'PRIMARY'
+in FCPATH\include\fct.inc.php on line 98.
+ 1 FCPATH\include\fct.inc.php(98): PDO->exec('insert into fichefrais(idvisiteur,mois,nbJustificatifs,montantValide,dateModif,idEtat) 
+			values (\'a131\',\'202310\',3,0,\'2023-10-8\',\'CR\');')
+ 2 APPPATH\Controllers\majGSB_main.php(24): creationFichesFrais(Object(PDO))
+ 3 SYSTEMPATH\Router\AutoRouter.php(147): include_once('APPPATH\\Controllers\\majGSB_main.php')
+ 4 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('majGsb_main')
+ 5 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('majGsb_main')
+ 6 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('majGsb_main')
+ 7 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
